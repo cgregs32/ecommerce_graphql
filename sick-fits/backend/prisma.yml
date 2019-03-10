@@ -1,0 +1,2 @@
+endpoint: https://us1.prisma.sh/little-fitz/dev
+datamodel: datamodel.prisma
