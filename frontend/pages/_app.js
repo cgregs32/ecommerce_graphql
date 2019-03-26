@@ -4,6 +4,7 @@ import { ApolloProvider } from "react-apollo";
 import withData from "../lib/withData";
 
 class MyApp extends App {
+  // apollo life cycle method - runs before render
   static async getInitialProps({ Component, ctx }) {
     let pageProps = {};
     if (Component.getInitialProps) {
@@ -11,6 +12,8 @@ class MyApp extends App {
     }
     // this exposes the query to the user
     pageProps.query = ctx.query;
+
+    // exposes as props to render function
     return { pageProps };
   }
   render() {
