@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import { Query } from "react-apollo";
+import Item from "./Item";
 import gql from "graphql-tag";
 import styled from "styled-components";
 
@@ -40,7 +41,7 @@ class Items extends Component {
             return (
               <ItemsList>
                 {data.items.map(item => (
-                  <p>{item.title}</p>
+                  <Item key={item.id} item={item} />
                 ))}
               </ItemsList>
             );
