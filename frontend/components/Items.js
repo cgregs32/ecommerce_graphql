@@ -16,7 +16,7 @@ const ItemsList = styled.div`
   margin: 0 atuo;
 `;
 
-const ALL_ITEMS_QUERY = gql`
+export const ALL_ITEMS_QUERY = gql`
   query ALL_ITEMS_QUERY {
     items {
       id
